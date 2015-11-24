@@ -1,1 +1,1 @@
-- First release of the bundle to install Cutadapt
+- First release of the bundle to install Cutadapt. Compatible with Statika dependency to `2.0.0-M4`
