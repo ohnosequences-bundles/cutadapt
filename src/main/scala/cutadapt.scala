@@ -3,11 +3,12 @@ package ohnosequencesBundles.statika
 import ohnosequences.statika._, bundles._, instructions._
 
 
-case object cutadapt extends Bundle(cdevel) {
+case object Cutadapt extends Bundle(cdevel) { cutadapt =>
 
-  def install: Results = {
-    Seq("pip", "install", "cutadapt") ->-
-    success(s"${bundleName} is installed")
-  }
+  lazy val install = cmd("pip")("install", "cutadapt")
+
+  def instructions: AnyInstructions = install
+
+
 
 }
