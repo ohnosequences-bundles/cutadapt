@@ -4,12 +4,13 @@ package ohnosequencesBundles.statika
 
 import ohnosequences.statika._
 
-abstract class Cutadapt extends Bundle(cdevel) { cutadapt =>
+abstract class Cutadapt extends Bundle(cdevel) {
 
-  lazy val install = cmd("pip")("install", "--install-option=--install-scripts=/usr/bin", "cutadapt")
-
-  def instructions: AnyInstructions = install
+  def instructions: AnyInstructions =
+    cmd("pip")("install", "--install-option=--install-scripts=/usr/bin", "cutadapt")
 }
+
+case object cutadapt extends Cutadapt
 
 ```
 
